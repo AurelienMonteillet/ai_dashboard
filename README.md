@@ -1,16 +1,16 @@
 # Tezos Adaptive Issuance Dashboard
 
-Un tableau de bord interactif pour visualiser l'historique de l'émission adaptative et du staking de Tezos.
+An interactive dashboard to visualize Tezos adaptive issuance and staking history. This project is inspired by and based on [xtzchads/ai.tez.cool](https://github.com/xtzchads/ai.tez.cool).
 
-## Fonctionnalités
+## Features
 
-- Visualisation de l'historique de l'émission (issuance) depuis la genèse
-- Visualisation de l'historique du staking depuis la genèse
-- Marqueurs pour les mises à jour importantes (Hangzhou, Paris, Quebec)
-- Interface responsive avec Bootstrap
-- Intégration avec l'API TzKT
+- Historical issuance rate visualization since genesis
+- Historical staking ratio visualization since genesis
+- Important protocol update markers (Hangzhou, Paris, Quebec)
+- Responsive interface with Bootstrap
+- TzKT API integration for real-time data
 
-## Technologies utilisées
+## Technologies
 
 - Next.js 14
 - TypeScript
@@ -21,17 +21,17 @@ Un tableau de bord interactif pour visualiser l'historique de l'émission adapta
 ## Installation
 
 ```bash
-# Cloner le dépôt
-git clone [URL_DU_REPO]
+# Clone the repository
+git clone https://github.com/AurelienMonteillet/ai_dashboard.git
 
-# Installer les dépendances
+# Install dependencies
 npm install
 
-# Lancer en développement
+# Run in development mode
 npm run dev
 ```
 
-## Structure du projet
+## Project Structure
 
 ```
 src/
@@ -46,6 +46,10 @@ src/
   └── ...
 ```
 
-## Contribution
+## Credits
 
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request.
+This project is a modern reimplementation of [xtzchads/ai.tez.cool](https://github.com/xtzchads/ai.tez.cool), using Next.js and TypeScript. The original visualization concept and design were created by the xtzchads team.
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
