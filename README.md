@@ -1,6 +1,6 @@
 # Tezos Adaptive Issuance Dashboard
 
-An interactive dashboard to visualize Tezos adaptive issuance and staking history. This project is inspired by and based on [xtzchads/ai.tez.cool](https://github.com/xtzchads/ai.tez.cool).
+An interactive dashboard to visualize Tezos adaptive issuance and staking history. This project is inspired by [tez.cool](https://tez.cool) but has been completely rewritten using modern web technologies and best practices.
 
 ## Features
 
@@ -48,7 +48,7 @@ src/
 
 ## Credits
 
-This project is a modern reimplementation of [xtzchads/ai.tez.cool](https://github.com/xtzchads/ai.tez.cool), using Next.js and TypeScript. The original visualization concept and design were created by the xtzchads team.
+This project provides a modern visualization of Tezos' adaptive issuance mechanism, originally inspired by the work of [xtzchads/ai.tez.cool](https://github.com/xtzchads/ai.tez.cool). While maintaining the same core purpose, this implementation has been completely rewritten using Next.js and TypeScript to provide a more maintainable, type-safe, and performant codebase.
 
 ## Contributing
 
