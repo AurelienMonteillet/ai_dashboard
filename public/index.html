@@ -20,6 +20,8 @@
   </style>
 </head>
 <body>
+  <!-- Loading indicator -->
+  <div id="loading-indicator" style="text-align:center;font-size:1.5rem;margin-top:32px;">Loading charts...</div>
   <!-- Header with Tezos logo and title -->
   <header class="tezos-header">
     <img src="/tezos-logo-white.svg" alt="Tezos Logo" class="tezos-logo">
@@ -63,33 +65,14 @@
     });
   </script>
   <script>
-    // Loads data and initializes both dashboards
+    // Hide loading indicator when charts are ready
     (async function() {
-      if (typeof fetchAggregatedData !== 'function') {
-        alert('main.js not loaded correctly');
-        return;
-      }
       try {
-        aggregatedDataCache = await fetchAggregatedData();
-        // Get historical ratios for projection
-        let ratios = [];
-        let last = 0;
-        const data = aggregatedDataCache.historicalCycleData;
-        const startCycle = 748; // AI_ACTIVATION_CYCLE
-        const relevantData = data.filter(cycleData => cycleData.cycle >= startCycle);
-        relevantData.forEach(cycleData => {
-          const ratio = cycleData.totalFrozen / cycleData.totalSupply;
-          ratios.push(ratio);
-          last = ratio;
-        });
-        // Project 50 more cycles
-        for (let i = 0; i < 50; i++) {
-          ratios.push(last);
-        }
-        createHistoricalCharts(ratios);
-      } catch (e) {
-        document.getElementById('stakingh').innerText = 'Loading error';
-        document.getElementById('issuanceh').innerText = 'Loading error';
+        const ratios = await initializeRatios();
+        main(ratios);
+        document.getElementById('loading-indicator').style.display = 'none';
+      } catch (error) {
+        document.getElementById('loading-indicator').innerText = 'Error loading charts.';
       }
     })();
   </script>
