@@ -1183,25 +1183,7 @@ function createTVLChart() {
 
 function main(ratio) {
   createHistoricalCharts(ratio);
-  createDALSupportChart();
-  createBurnedSupplyChart();
-  createTotalAccountsChart();
-  createTotalTransactionsChart();
-  createTVLChart();
-  createHistoricalTvlChart();
-  
-  try {
-    const data = aggregatedDataCache.homeData;
-    const { totalStakedPercentage, totalDelegatedPercentage, stakingApy, delegationApy } = data.stakingData;
-    createPieChart(
-      totalStakedPercentage, 
-      totalDelegatedPercentage, 
-      stakingApy.toFixed(2), 
-      delegationApy.toFixed(2)
-    );
-  } catch (error) {
-    console.error('Error creating pie chart:', error);
-  }
+  // createTVLChart();
 }
 
 document.addEventListener('DOMContentLoaded', async function() {
