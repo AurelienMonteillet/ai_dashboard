@@ -1,55 +1,39 @@
-# Tezos Adaptive Issuance Dashboard
+# Tezos AI Dashboard
 
-An interactive dashboard to visualize Tezos adaptive issuance and staking history. This project is inspired by [tez.cool](https://tez.cool) but has been completely rewritten using modern web technologies and best practices.
+This project is a static dashboard (HTML/CSS/JS) to visualize the evolution of staking and issuance on Tezos.
 
 ## Features
+- Graphical visualization of staking and issuance evolution since genesis
+- Modern design with a blue-purple gradient background
+- Tezos logo at the top left
+- "powered by xtzchads" badge at the bottom right, linking to https://tez.cool/
+- 100% static, no dependencies on React, Next.js, or Tailwind
 
-- Historical issuance rate visualization since genesis
-- Historical staking ratio visualization since genesis
-- Important protocol update markers (Hangzhou, Paris, Quebec)
-- Responsive interface with Bootstrap
-- TzKT API integration for real-time data
+## How to Run Locally
 
-## Technologies
-
-- Next.js 14
-- TypeScript
-- Highcharts
-- Bootstrap
-- TzKT API
-
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/AurelienMonteillet/ai_dashboard.git
-
-# Install dependencies
-npm install
-
-# Run in development mode
-npm run dev
-```
+1. Go to the project directory:
+   ```bash
+   cd /opt/ai_dashboard
+   ```
+2. Start a local HTTP server (example with Python):
+   ```bash
+   python3 -m http.server 8080
+   ```
+3. Open your browser at:
+   ```
+   http://localhost:8080/charts_only.html
+   ```
 
 ## Project Structure
+- `charts_only.html`: main dashboard page
+- `css/main.css`: main styles
+- `js/`: scripts for charts (Highcharts, etc.)
+- `public/tezos-logo-white.svg`: Tezos logo used in the header
 
-```
-src/
-  ├── app/
-  │   ├── components/
-  │   │   └── HistoricalChart.tsx
-  │   ├── services/
-  │   │   └── tzkt-api.ts
-  │   ├── globals.css
-  │   ├── layout.tsx
-  │   └── page.tsx
-  └── ...
-```
+## Customization
+- The gradient background and header style can be changed in `css/main.css`
+- To change the logo, replace the SVG file in `public/`
 
-## Credits
+---
 
-This project provides a modern visualization of Tezos' adaptive issuance mechanism, originally inspired by the work of [xtzchads/ai.tez.cool](https://github.com/xtzchads/ai.tez.cool). While maintaining the same core purpose, this implementation has been completely rewritten using Next.js and TypeScript to provide a more maintainable, type-safe, and performant codebase.
-
-## Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+Dashboard made for the Tezos community. 
